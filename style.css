@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@400;700&display=swap");
+
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- COLORS ---------- */
+:root {
+  --green: hsl(158, 36%, 37%);
+  --green-dark: hsl(158, 42%, 18%);
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* ---------- BASE ---------- */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--cream);
+  color: var(--black);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* ---------- CARD (MOBILE) ---------- */
+.card {
+  background-color: var(--white);
+  border-radius: 0.7rem;
+  overflow: hidden;
+  max-width: 375px;
+}
+
+/* ---------- IMAGE ---------- */
+.card-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- CONTENT ---------- */
+.card-content {
+  padding: 1.5rem;
+}
+
+.perfume {
+  font-size: 0.75rem;
+  letter-spacing: 0.3rem;
+  color: var(--grey);
+  margin-bottom: 0.75rem;
+}
+
+.card-content h1 {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--grey);
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- PRICE ---------- */
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: var(--green);
+}
+
+.original-price {
+  color: var(--grey);
+  text-decoration: line-through;
+}
+
+/* ---------- BUTTON ---------- */
+button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--green);
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+button:hover {
+  background-color: var(--green-dark);
+}
+
+/* ---------- DESKTOP ---------- */
+@media (min-width: 934px) {
+  .card {
+    display: flex;
+    max-width: 600px;
+    height: 450px;
+  }
+
+  .card-img,
+  .card-content {
+    width: 50%;
+  }
+
+  .card-img img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .perfume,
+  .card-content h1,
+  .card-content p .price-section {
+    margin-bottom: 1.5rem;
+  }
+}
